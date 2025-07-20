@@ -24,35 +24,37 @@ export default function FilterPanel() {
   }, []);
 
   return (
-    <div ref={panelRef} className="flex flex-wrap gap-3 w-full text-black">
-      <FilterDropdown
-        id="location"
-        label="Location"
-        options={["Mangaluru", "Bangaluru", "Puttur", "Kundapura","Remote"]}
-        isOpen={openDropdown === "location"}
-        onToggle={() => handleDropdownToggle("location")}
-      />
-      <FilterDropdown
-        id="timeType"
-        label="Time Type"
-        options={["Full-Time", "Part-Time", "Contract"]}
-        isOpen={openDropdown === "timeType"}
-        onToggle={() => handleDropdownToggle("timeType")}
-      />
-      <FilterDropdown
-        id="jobCategory"
-        label="Job Category"
-        options={["Engineering", "Design", "Marketing", "Sales"]}
-        isOpen={openDropdown === "jobCategory"}
-        onToggle={() => handleDropdownToggle("jobCategory")}
-      />
-      <FilterDropdown
-        id="more"
-        label="More"
-        options={["Internships", "Remote Only", "Urgent Roles"]}
-        isOpen={openDropdown === "more"}
-        onToggle={() => handleDropdownToggle("more")}
-      />
+    <div ref={panelRef} className="bg-white rounded-2xl shadow-lg p-6">
+      <div className="flex flex-wrap gap-4">
+        <FilterDropdown
+          id="location"
+          label="Location"
+          options={["Mangaluru", "Bengaluru", "Puttur", "Kundapura","Remote"]}
+          isOpen={openDropdown === "location"}
+          onToggle={() => handleDropdownToggle("location")}
+        />
+        <FilterDropdown
+          id="timeType"
+          label="Time Type"
+          options={["Full-Time", "Part-Time", "Contract"]}
+          isOpen={openDropdown === "timeType"}
+          onToggle={() => handleDropdownToggle("timeType")}
+        />
+        <FilterDropdown
+          id="jobCategory"
+          label="Job Category"
+          options={["Engineering", "Design", "Marketing", "Sales"]}
+          isOpen={openDropdown === "jobCategory"}
+          onToggle={() => handleDropdownToggle("jobCategory")}
+        />
+        <FilterDropdown
+          id="more"
+          label="More"
+          options={["Internships", "Remote Only", "Urgent Roles"]}
+          isOpen={openDropdown === "more"}
+          onToggle={() => handleDropdownToggle("more")}
+        />
+      </div>
     </div>
   );
 }

@@ -1,17 +1,16 @@
-import SearchBar from "@/components/Search/SearchBar";
-import FilterPanel from "@/components/Search/FilterPanel";
+import SearchSection from "@/components/Search/SearchSection";
 import HeaderBar from "@/components/Header/Header";
+import JobDetails from "@/components/JobDetail/JobDetail";
+
 export default function HomePage() {
   return (
     <main>
       <HeaderBar />
-      <div className="px-6 mt-8">
-        <SearchBar />
+      <SearchSection />
+      
+      <div className="px-6 py-8">
+        <JobDetails />
       </div>
-      <div className="px-6">
-        <FilterPanel />
-      </div>
-      {/* JobList would go here */}
     </main>
   );
 }
