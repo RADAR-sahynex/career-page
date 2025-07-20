@@ -15,7 +15,7 @@ export default function SearchSection() {
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-800 mb-4">
                 Find Your Dream
-                <span className="text-blue-600"> Career</span>
+                <span className="text-orange-600"> Career</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 mb-6 max-w-2xl mx-auto lg:mx-0">
                 Discover amazing opportunities at Sahynex. Join our innovative team 
@@ -34,7 +34,7 @@ export default function SearchSection() {
               </div>
             </div>
 
-            {/* Right Side - Images */}
+          {/* Right Side - Images */}
             <div className="flex-1 flex justify-center lg:justify-end mt-6 lg:mt-0">
               <div className="relative">
                 {/* Main Image */}
