@@ -10,7 +10,7 @@ import Image from 'next/image';
         {/* Logo */}
         <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
           <Image src="/sahynex_logo.jpeg" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
-          <h1 className="text-lg sm:text-xl font-bold text-orange-500 text-center">CAREERS AT SAHYNEX</h1>
+          <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-orange-500 text-center">CAREERS AT SAHYNEX</h1>
         </div>
 
         {/* Navigation Links */}
