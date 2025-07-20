@@ -1,16 +1,28 @@
-import { FileText, MessageCircle, Bell, X, Globe, Briefcase, MapPin, Clock } from 'lucide-react';
+import { FileText, MessageCircle, Bell, X, Globe, Briefcase, MapPin, Clock, ArrowLeft } from 'lucide-react';
 
 type JobDetailsProps = {
   selectedJob?: any;
+  onBack?: () => void;
 };
 
-export default function JobDetails({ selectedJob }: JobDetailsProps) {
+export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
   // If a job is selected, show job posting details
   if (selectedJob) {
     return (
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
         {/* Header */}
         <div className="relative bg-gray-50 p-6 border-b">
+          {/* Back button for mobile */}
+          {onBack && (
+            <button 
+              onClick={onBack}
+              className="lg:hidden mb-4 flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Back to Jobs
+            </button>
+          )}
+          
           <div className="pr-12">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               {selectedJob.title}
