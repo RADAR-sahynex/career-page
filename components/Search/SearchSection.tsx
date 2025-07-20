@@ -35,31 +35,7 @@ export default function SearchSection() {
             </div>
 
           {/* Right Side - Images */}
-            <div className="flex-1 flex justify-center lg:justify-end mt-6 lg:mt-0">
-              <div className="relative">
-                {/* Main Image */}
-                <div className="relative w-64 h-64 sm:w-80 sm:h-80 bg-white rounded-3xl shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 opacity-10"></div>
-                  <div className="flex items-center justify-center h-full">
-                    <div className="text-center px-4">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-white text-xl sm:text-2xl">💼</span>
-                      </div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Join Our Team</h3>
-                      <p className="text-gray-600 px-4 sm:px-6 text-sm sm:text-base">Be part of something amazing</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 sm:w-16 sm:h-16 bg-yellow-400 rounded-full shadow-lg flex items-center justify-center animate-bounce">
-                  <span className="text-xl sm:text-2xl">⭐</span>
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-10 h-10 sm:w-12 sm:h-12 bg-green-400 rounded-full shadow-lg flex items-center justify-center animate-pulse">
-                  <span className="text-lg sm:text-xl">🎯</span>
-                </div>
-              </div>
-            </div>
+          
           </div>
         </div>
 
