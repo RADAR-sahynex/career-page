@@ -6,17 +6,17 @@ import Image from 'next/image';
       {/* Orange line at the very top */}
       <div className="w-full h-1 bg-orange-500"></div>
       
-      <header className="flex justify-between items-center px-6 py-6 bg-white shadow-md">
+      <header className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 py-4 sm:py-6 bg-white shadow-md">
         {/* Logo */}
-        <div className="flex items-center space-x-4">
-          <Image src="/sahynex_logo.jpeg" alt="Sahynex Logo" width={120} height={40} />
-          <h1 className="text-xl font-bold text-orange-500">CAREERS AT SAHYNEX</h1>
+        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
+          <Image src="/sahynex_logo.jpeg" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
+          <h1 className="text-lg sm:text-xl font-bold text-orange-500 text-center">CAREERS AT SAHYNEX</h1>
         </div>
 
         {/* Navigation Links */}
-        <nav className="space-x-8">
-          <a href="#" className="text-orange-500 hover:text-orange-600 font-medium">Career Home</a>
-          <a href="#" className="text-orange-500 hover:text-orange-600 font-medium">Search Jobs</a>
+        <nav className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
+          <a href="#" className="text-orange-500 hover:text-orange-600 font-medium text-center">Career Home</a>
+          <a href="#" className="text-orange-500 hover:text-orange-600 font-medium text-center">Search Jobs</a>
         </nav>
       </header>
     </div>

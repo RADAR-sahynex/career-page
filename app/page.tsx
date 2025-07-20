@@ -8,7 +8,7 @@ export default function HomePage() {
       <HeaderBar />
       <SearchSection />
       
-      <div className="px-6 py-8">
+      <div className="px-4 sm:px-6 py-6 sm:py-8">
         <JobDetails />
       </div>
     </main>

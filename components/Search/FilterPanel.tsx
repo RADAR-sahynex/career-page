@@ -24,8 +24,8 @@ export default function FilterPanel() {
   }, []);
 
   return (
-    <div ref={panelRef} className="bg-white rounded-2xl shadow-lg p-6">
-      <div className="flex flex-wrap gap-4">
+    <div ref={panelRef} className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         <FilterDropdown
           id="location"
           label="Location"
