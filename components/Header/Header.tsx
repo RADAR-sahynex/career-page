@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
- function HeaderBar() {
+function HeaderBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -10,7 +10,7 @@ import { useState } from 'react';
       {/* Orange line at the very top */}
       <div className="w-full h-1 bg-orange-500"></div>
       
-      <header className="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 bg-white shadow-md">
+      <header className="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 !bg-white shadow-md" style={{ backgroundColor: '#ffffff' }}>
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <Image src="/sahynex_logo.jpeg" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
@@ -64,4 +64,5 @@ import { useState } from 'react';
     </div>
   );
 }
+
 export default HeaderBar;
