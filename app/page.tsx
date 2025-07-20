@@ -14,7 +14,7 @@ export default function HomePage() {
           <div className="w-full lg:w-1/2">
             <JobPosting />
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="hidden lg:block w-full lg:w-1/2">
             <JobDetails />
           </div>
         </div>
