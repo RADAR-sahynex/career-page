@@ -9,9 +9,19 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
   // If a job is selected, show job posting details
   if (selectedJob) {
     return (
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
         {/* Header */}
         <div className="relative bg-gray-50 p-6 border-b">
+          {/* X button for PC/laptop */}
+          {onBack && (
+            <button 
+              onClick={onBack}
+              className="hidden lg:block absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          )}
+
           {/* Back button for mobile */}
           {onBack && (
             <button 
@@ -69,9 +79,9 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-6">
+        <div className="p-6 space-y-6 bg-white">
           {/* Who We Are */}
-          <div>
+          <div className="bg-white">
             <h2 className="text-xl font-semibold text-orange-600 mb-4">Who We Are</h2>
             <p className="text-gray-700 leading-relaxed">
               At Sahynex, we design, build, manage and modernize the mission-critical technology 
@@ -82,7 +92,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
           </div>
 
           {/* The Role */}
-          <div>
+          <div className="bg-white">
             <h2 className="text-xl font-semibold text-orange-600 mb-4">The Role</h2>
             <p className="text-gray-700 leading-relaxed">
               Every position at Sahynex offers a way forward to grow your career. We have training 
@@ -92,7 +102,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
           </div>
 
           {/* Your Future */}
-          <div>
+          <div className="bg-white">
             <h2 className="text-xl font-semibold text-orange-600 mb-4">Your Future</h2>
             <p className="text-gray-700 leading-relaxed">
               Join us in shaping the future of technology. This role offers exciting challenges, 
@@ -107,7 +117,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
 
   // Default welcome message when no job is selected
   return (
-    <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
       {/* Header */}
       <div className="bg-gray-50 p-6 border-b">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Welcome!</h1>
@@ -115,16 +125,16 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
       </div>
 
       {/* Content */}
-      <div className="p-6 space-y-8">
+      <div className="p-6 space-y-8 bg-white">
         {/* Welcome Message */}
-        <div>
+        <div className="bg-white">
           <p className="text-gray-700 leading-relaxed text-lg mb-6">
             Take a look around at the many exciting career opportunities we have available and apply today!
           </p>
         </div>
 
         {/* Can't find a job section */}
-        <div>
+        <div className="bg-white">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
             Can't find a suitable job opening?
           </h2>
@@ -189,7 +199,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
         </div>
 
         {/* Read Less button */}
-        <div className="text-center">
+        <div className="text-center bg-white">
           <button className="text-orange-600 hover:text-orange-700 font-medium">
             Read Less
           </button>

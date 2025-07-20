@@ -9,9 +9,9 @@ type JobListProps = {
 
 export default function JobList({ onJobSelect }: JobListProps) {
   return (
-    <div className="w-full max-w-4xl mx-auto flex flex-col bg-white shadow-md sm:shadow-lg rounded-lg sm:rounded-xl divide-y divide-gray-200">
+    <div className="w-full max-w-4xl mx-auto flex flex-col bg-white shadow-md sm:shadow-lg rounded-lg sm:rounded-xl divide-y divide-gray-200" style={{ backgroundColor: '#ffffff' }}>
       {/* Total jobs found */}
-      <div className="p-4 sm:p-6 text-sm sm:text-base font-semibold text-gray-500">
+      <div className="p-4 sm:p-6 text-sm sm:text-base font-semibold text-gray-500 bg-white">
         {jobs.length} JOBS FOUND
       </div>
 
@@ -19,7 +19,7 @@ export default function JobList({ onJobSelect }: JobListProps) {
       {jobs.map((job, index) => (
         <div 
           key={index} 
-          className="p-4 sm:p-6 hover:bg-gray-50 cursor-pointer transition-colors duration-200"
+          className="p-4 sm:p-6 bg-white hover:bg-gray-50 cursor-pointer transition-colors duration-200"
           onClick={() => onJobSelect && onJobSelect(job)}
         >
           {/* Title */}
