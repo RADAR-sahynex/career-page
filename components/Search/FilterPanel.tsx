@@ -10,7 +10,6 @@ export default function FilterPanel() {
     setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
   };
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (panelRef.current && !panelRef.current.contains(event.target as Node)) {
@@ -29,7 +28,7 @@ export default function FilterPanel() {
       <FilterDropdown
         id="location"
         label="Location"
-        options={["New York", "Bangalore", "London", "Remote"]}
+        options={["Mangaluru", "Bangaluru", "Puttur", "Kundapura","Remote"]}
         isOpen={openDropdown === "location"}
         onToggle={() => handleDropdownToggle("location")}
       />

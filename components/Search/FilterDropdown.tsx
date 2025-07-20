@@ -31,7 +31,6 @@ export default function FilterDropdown({ id, label, options, isOpen, onToggle, g
               key={index}
               className="px-4 py-2 text-sm hover:bg-gray-100 cursor-pointer"
               onClick={() => {
-                // Close the dropdown when an option is selected
                 onToggle();
               }}
             >
