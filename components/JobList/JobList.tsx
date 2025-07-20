@@ -3,7 +3,11 @@ import React from 'react';
 import { jobs } from '../../data/jobs'
 import { Globe, MapPin, Clock } from 'lucide-react';
 
-export default function JobDetails() {
+type JobListProps = {
+  onJobSelect?: (job: any) => void;
+};
+
+export default function JobList({ onJobSelect }: JobListProps) {
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col bg-white shadow-md sm:shadow-lg rounded-lg sm:rounded-xl divide-y divide-gray-200">
       {/* Total jobs found */}
@@ -13,9 +17,13 @@ export default function JobDetails() {
 
       {/* Job Cards */}
       {jobs.map((job, index) => (
-        <div key={index} className="p-4 sm:p-6">
+        <div 
+          key={index} 
+          className="p-4 sm:p-6 hover:bg-gray-50 cursor-pointer transition-colors duration-200"
+          onClick={() => onJobSelect && onJobSelect(job)}
+        >
           {/* Title */}
-          <h2 className="text-base sm:text-lg font-semibold underline text-gray-800 mb-3 sm:mb-4">
+          <h2 className="text-base sm:text-lg font-semibold underline text-gray-800 mb-3 sm:mb-4 hover:text-orange-600 transition-colors">
             {job.title}
           </h2>
 
