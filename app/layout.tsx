@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Sahynex" }],
   creator: "Sahynex",
   publisher: "Sahynex",
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "16x16", type: "image/png" }
+    ],
+    apple: "/icon.png",
+    shortcut: "/icon.png",
+  },
   openGraph: {
     title: "Careers at Sahynex | Find Your Dream Job",
     description: "Discover amazing career opportunities at Sahynex. Join our innovative team and build the future of technology together.",
@@ -53,6 +61,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="shortcut icon" href="/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased m-0 p-0`}
       >
