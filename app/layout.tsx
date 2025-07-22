@@ -19,11 +19,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Sahynex" }],
   creator: "Sahynex",
   publisher: "Sahynex",
-  icons: {
-    icon: "/sahynex_logo.jpeg",
-    apple: "/sahynex_logo.jpeg",
-    shortcut: "/sahynex_logo.jpeg",
-  },
   openGraph: {
     title: "Careers at Sahynex | Find Your Dream Job",
     description: "Discover amazing career opportunities at Sahynex. Join our innovative team and build the future of technology together.",
