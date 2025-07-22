@@ -20,18 +20,13 @@ export const metadata: Metadata = {
   creator: "Sahynex",
   publisher: "Sahynex",
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/sahynex_logo.jpeg", type: "image/jpeg" },
-    ],
+    icon: "/sahynex_logo.jpeg",
     apple: "/sahynex_logo.jpeg",
-    shortcut: "/favicon.ico",
+    shortcut: "/sahynex_logo.jpeg",
   },
-  metadataBase: new URL("https://careers.sahynex.com"),
   openGraph: {
     title: "Careers at Sahynex | Find Your Dream Job",
     description: "Discover amazing career opportunities at Sahynex. Join our innovative team and build the future of technology together.",
-    url: "https://careers.sahynex.com",
     siteName: "Sahynex Careers",
     images: [
       {
