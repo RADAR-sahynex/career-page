@@ -94,7 +94,7 @@ body {
 
 /* Gradient Classes */
 .bg-header-gradient {
-  background: linear-gradient(135deg, #4A93FF 0%, #D91F4C 55%, #FF001D 100%);
+  background: linear-gradient(135deg, #4A93FF 0%, #D91F4C 65%, #FF001D 100%);
 }
 
 .hover\:bg-primary-red:hover {

@@ -1,4 +1,6 @@
+"use client";
 import { FileText, MessageCircle, Bell, X, Globe, Briefcase, MapPin, Clock, ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
 
 type JobDetailsProps = {
   selectedJob?: any;
@@ -6,6 +8,8 @@ type JobDetailsProps = {
 };
 
 export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
+  const [showMission, setShowMission] = useState(true);
+  
   // If a job is selected, show job posting details
   if (selectedJob) {
     return (
@@ -185,23 +189,28 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
         </div>
 
         {/* Company Mission */}
-        <div className="bg-red-50 p-6 rounded-lg border border-primary-red">
-          <h2 className="text-xl font-semibold text-primary-red mb-4 font-primary">
-            Curiosity is the Core of Innovation
-          </h2>
-          <p className="text-gray-700 leading-relaxed font-secondary">
-            At Sahynex, curiosity is at the core of innovation. It fuels the most vital need inside us—the 
-            need to progress. To be a Sahynex means standing up for Progress and going all in, fully 
-            committing to our customers and their progress. As we grow, our curiosity opens new worlds, 
-            new ways of thinking and solving problems. It helps us in our career and to find joy in our work. 
-            What sparks your curiosity?
-          </p>
-        </div>
+        {showMission && (
+          <div className="bg-red-50 p-6 rounded-lg border border-primary-red">
+            <h2 className="text-xl font-semibold text-primary-red mb-4 font-primary">
+              Curiosity is the Core of Innovation
+            </h2>
+            <p className="text-gray-700 leading-relaxed font-secondary">
+              At Sahynex, curiosity is at the core of innovation. It fuels the most vital need inside us—the 
+              need to progress. To be a Sahynex means standing up for Progress and going all in, fully 
+              committing to our customers and their progress. As we grow, our curiosity opens new worlds, 
+              new ways of thinking and solving problems. It helps us in our career and to find joy in our work. 
+              What sparks your curiosity?
+            </p>
+          </div>
+        )}
 
-        {/* Read Less button */}
+        {/* Toggle Mission button */}
         <div className="text-center">
-          <button className="text-primary-red hover:text-red-700 font-medium font-secondary">
-            Read Less
+          <button 
+            onClick={() => setShowMission(!showMission)}
+            className="text-primary-red hover:text-red-700 font-medium font-secondary transition-colors duration-200"
+          >
+            {showMission ? 'Read Less' : 'Read More'}
           </button>
         </div>
       </div>
