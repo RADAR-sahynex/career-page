@@ -9,9 +9,19 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
   // If a job is selected, show job posting details
   if (selectedJob) {
     return (
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
         {/* Header */}
         <div className="relative bg-gray-50 p-6 border-b">
+          {/* X button for PC/laptop */}
+          {onBack && (
+            <button 
+              onClick={onBack}
+              className="hidden lg:block absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          )}
+
           {/* Back button for mobile */}
           {onBack && (
             <button 
@@ -28,7 +38,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
               {selectedJob.title}
             </h1>
             
-            <button className="bg-primary-red hover:bg-primary-blue text-white px-6 py-2 rounded border border-primary-red hover:border-primary-blue transition-colors font-medium font-secondary">
+            <button className="bg-primary-red hover:bg-primary-red text-white px-6 py-2 rounded border border-primary-red transition-colors font-medium font-secondary">
               Apply
             </button>
           </div>
@@ -69,7 +79,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-6">
+        <div className="p-6 space-y-6 bg-white">
           {/* Who We Are */}
           <div>
             <h2 className="text-xl font-semibold text-primary-red mb-4 font-primary">Who We Are</h2>
@@ -107,7 +117,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
 
   // Default welcome message when no job is selected
   return (
-    <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
       {/* Header */}
       <div className="bg-gray-50 p-6 border-b">
         <h1 className="text-2xl font-bold text-gray-900 mb-2 font-primary">Welcome!</h1>
@@ -115,7 +125,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
       </div>
 
       {/* Content */}
-      <div className="p-6 space-y-8">
+      <div className="p-6 space-y-8 bg-white">
         {/* Welcome Message */}
         <div>
           <p className="text-gray-700 leading-relaxed text-lg mb-6 font-secondary">
@@ -144,7 +154,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
                     Drop off your CV/Resume and a Recruiter will reach out with related career 
                     information that match your experience and expertise.
                   </p>
-                  <button className="bg-primary-blue text-white px-6 py-2 rounded-lg hover:bg-primary-red transition-colors font-medium font-secondary">
+                  <button className="bg-primary-blue hover:bg-primary-blue text-white px-6 py-2 rounded-lg transition-colors font-medium font-secondary">
                     Upload Resume
                   </button>
                 </div>
@@ -165,7 +175,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
                     Create your account and then sign up for job alerts. When new jobs become 
                     available that meet your criteria, you'll be alerted right away!
                   </p>
-                  <button className="bg-primary-green text-white px-6 py-2 rounded-lg hover:bg-primary-red transition-colors font-medium font-secondary">
+                  <button className="bg-primary-green hover:bg-primary-green text-white px-6 py-2 rounded-lg transition-colors font-medium font-secondary">
                     Create Account
                   </button>
                 </div>
@@ -190,7 +200,7 @@ export default function JobDetails({ selectedJob, onBack }: JobDetailsProps) {
 
         {/* Read Less button */}
         <div className="text-center">
-          <button className="text-primary-red hover:text-primary-blue font-medium font-secondary">
+          <button className="text-primary-red hover:text-red-700 font-medium font-secondary">
             Read Less
           </button>
         </div>
