@@ -97,6 +97,24 @@ body {
   background: linear-gradient(135deg, #4A93FF 0%, #D91F4C 65%, #FF001D 100%);
 }
 
+/* Placeholder Styling */
+::placeholder {
+  color: #9CA3AF;
+  opacity: 1;
+}
+
+input::placeholder {
+  color: #9CA3AF;
+  opacity: 1;
+}
+
+/* Search Input Specific */
+.search-input::placeholder {
+  color: #6B7280;
+  opacity: 1;
+  font-weight: 400;
+}
+
 .hover\:bg-primary-red:hover {
   background-color: #CC2600;
 }

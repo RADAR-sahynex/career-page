@@ -6,10 +6,11 @@ export default function SearchBar() {
     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full mb-4">
       {/* Search input with icon */}
       <div className="relative w-full">
-        <input
+                <input
           type="text"
           placeholder="Search for jobs or keywords"
-          className="w-full border border-gray-300 rounded-md pl-10 pr-4 py-3 sm:py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-red focus:border-transparent font-secondary"></input>
+          className="search-input w-full border border-gray-300 rounded-md pl-10 pr-4 py-3 sm:py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-red focus:border-transparent font-secondary text-gray-900"
+        />
         <span className="absolute left-3 top-3.5 sm:top-2.5 text-gray-400">
           🔍
         </span>
