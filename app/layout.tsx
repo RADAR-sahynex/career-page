@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Careers at Sahynex | Find Your Dream Job",
+  title: "Careers at Sahynex",
   description: "Discover amazing career opportunities at Sahynex. Join our innovative team and build the future of technology together.",
   keywords: ["careers", "jobs", "sahynex", "technology", "innovation", "employment"],
   authors: [{ name: "Sahynex" }],

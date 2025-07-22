@@ -13,7 +13,7 @@ function HeaderBar() {
       <header className="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 !bg-white shadow-md" style={{ backgroundColor: '#ffffff' }}>
         {/* Logo */}
         <div className="flex items-center space-x-4">
-          <Image src="/sahynex_logo.jpeg" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
+          <Image src="/sahynex.png" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
           <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-primary-red font-primary">CAREERS AT SAHYNEX</h1>
         </div>
 
