@@ -4,6 +4,7 @@ import SearchSection from "@/components/Search/SearchSection";
 import HeaderBar from "@/components/Header/Header";
 import JobDetails from "@/components/JobDetail/JobDetail";
 import JobPosting from "@/components/JobList/JobList";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -27,6 +28,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <Footer/>
     </main>
   );
 }

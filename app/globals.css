@@ -130,3 +130,6 @@ input::placeholder {
 .hover\:bg-primary-yellow:hover {
   background-color: #CC9400;
 }
+.footy{
+  text-align: center; 
+}

@@ -14,7 +14,7 @@ function HeaderBar() {
         {/* Left: Logo */}
         <div className="flex items-center space-x-4">
           <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-primary-red font-primary">CAREERS AT </h1>
-          <Image src="/sahynex_logo.jpeg" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
+          <Image src="/logo.svg" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
         </div>
 
         {/* Right: Home Button + Hamburger */}
