@@ -1,6 +1,10 @@
+
 @import "tailwindcss";
+
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Root Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,16 +21,18 @@
   --gradient-red: #FF001D;
 }
 
-/* Remove dark mode override for uniform appearance */
+/*  Force full white background for all OS/browsers */
 html, body {
   background-color: #ffffff !important;
-  color: var(--foreground);
+  color: #000000 !important;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-/* Typography Classes */
+/* Typography */
 .font-primary {
   font-family: 'Raleway', sans-serif;
 }
@@ -39,95 +45,49 @@ html, body {
   font-family: 'Gotham', sans-serif;
 }
 
-/* Custom Color Classes */
-.text-primary-red {
-  color: #FF3000;
-}
+/* Text Colors */
+.text-primary-red { color: var(--primary-red); }
+.text-primary-blue { color: var(--primary-blue); }
+.text-primary-green { color: var(--primary-green); }
+.text-primary-yellow { color: var(--primary-yellow); }
 
-.text-primary-blue {
-  color: #00B3F2;
-}
+/* Background Colors */
+.bg-primary-red { background-color: var(--primary-red); }
+.bg-primary-blue { background-color: var(--primary-blue); }
+.bg-primary-green { background-color: var(--primary-green); }
+.bg-primary-yellow { background-color: var(--primary-yellow); }
 
-.text-primary-green {
-  color: #83B200;
-}
+/* Border Colors */
+.border-primary-red { border-color: var(--primary-red); }
+.border-primary-blue { border-color: var(--primary-blue); }
+.border-primary-green { border-color: var(--primary-green); }
+.border-primary-yellow { border-color: var(--primary-yellow); }
 
-.text-primary-yellow {
-  color: #FFB900;
-}
-
-.bg-primary-red {
-  background-color: #FF3000;
-}
-
-.bg-primary-blue {
-  background-color: #00B3F2;
-}
-
-.bg-primary-green {
-  background-color: #83B200;
-}
-
-.bg-primary-yellow {
-  background-color: #FFB900;
-}
-
-.border-primary-red {
-  border-color: #FF3000;
-}
-
-.border-primary-blue {
-  border-color: #00B3F2;
-}
-
-.border-primary-green {
-  border-color: #83B200;
-}
-
-.border-primary-yellow {
-  border-color: #FFB900;
-}
-
-/* Gradient Classes */
+/* Gradients */
 .bg-header-gradient {
-  background: linear-gradient(135deg, #4A93FF 0%, #D91F4C 65%, #FF001D 100%);
+  background: linear-gradient(135deg, var(--gradient-blue) 0%, var(--gradient-pink) 65%, var(--gradient-red) 100%);
 }
 
-/* Placeholder Styling */
-::placeholder {
-  color: #9CA3AF;
-  opacity: 1;
-}
-
+/* Placeholders */
+::placeholder,
 input::placeholder {
   color: #9CA3AF;
   opacity: 1;
 }
 
-/* Search Input Specific */
 .search-input::placeholder {
   color: #6B7280;
   opacity: 1;
   font-weight: 400;
 }
 
-/* Hover State Colors */
-.hover\:bg-primary-red:hover {
-  background-color: #CC2600;
-}
+/* Hover Colors */
+.hover\:bg-primary-red:hover { background-color: #CC2600; }
+.hover\:bg-primary-blue:hover { background-color: #008FC2; }
+.hover\:bg-primary-green:hover { background-color: #6B9000; }
+.hover\:bg-primary-yellow:hover { background-color: #CC9400; }
 
-.hover\:bg-primary-blue:hover {
-  background-color: #008FC2;
-}
-
-.hover\:bg-primary-green:hover {
-  background-color: #6B9000;
-}
-
-.hover\:bg-primary-yellow:hover {
-  background-color: #CC9400;
-}
-
+/* Footer */
 .footy {
   text-align: center;
 }
