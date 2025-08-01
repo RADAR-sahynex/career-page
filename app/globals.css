@@ -4,30 +4,26 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
   /* Primary Colors */
   --primary-red: #FF3000;
   --primary-blue: #00B3F2;
   --primary-green: #83B200;
   --primary-yellow: #FFB900;
-  
+
   /* Gradient Colors */
   --gradient-blue: #4A93FF;
   --gradient-pink: #D91F4C;
   --gradient-red: #FF001D;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #000000;
-  }
-}
-
-body {
-  background: var(--background);
+/* Remove dark mode override for uniform appearance */
+html, body {
+  background-color: #ffffff !important;
   color: var(--foreground);
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Typography Classes */
@@ -115,6 +111,7 @@ input::placeholder {
   font-weight: 400;
 }
 
+/* Hover State Colors */
 .hover\:bg-primary-red:hover {
   background-color: #CC2600;
 }
@@ -130,6 +127,7 @@ input::placeholder {
 .hover\:bg-primary-yellow:hover {
   background-color: #CC9400;
 }
-.footy{
-  text-align: center; 
+
+.footy {
+  text-align: center;
 }
