@@ -22,7 +22,8 @@ function HeaderBar() {
           {/* Home Button */}
           <a
             href="#"
-            className="text-primary-red hover:text-red-700 font-medium font-secondary border border-primary-red px-4 py-1.5 rounded-md transition duration-200"
+            className="text-primary-red hover:text-white  hover:shadow-lg hover:scale-105 active:scale-95 active:shadow-inner font-medium font-secondary border border-primary-red px-4 py-1.5 rounded-md transition-all duration-300 ease-in-out"
+
           >
             Home
           </a>
