@@ -10,8 +10,12 @@ function HeaderBar() {
       {/* Gradient header background */}
       <div className="w-full h-2 bg-header-gradient"></div>
 
-      <header className="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 bg-white shadow-md relative z-50">
-        {/* Left: Logo */}
+      {/* Header */}
+      <header
+        className="!bg-white flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 shadow-md relative z-50"
+        style={{ backgroundColor: '#FFFFFF' }}
+      >
+        {/* Left: Logo and Title */}
         <div className="flex items-center space-x-4">
           <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-primary-red font-primary">CAREERS AT </h1>
           <Image src="/logo.svg" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
@@ -19,16 +23,14 @@ function HeaderBar() {
 
         {/* Right: Home Button + Hamburger */}
         <div className="flex items-center space-x-4">
-          {/* Home Button */}
           <a
             href="#"
-            className="text-primary-red hover:text-white  hover:shadow-lg hover:scale-105 active:scale-95 active:shadow-inner font-medium font-secondary border border-primary-red px-4 py-1.5 rounded-md transition-all duration-300 ease-in-out"
-
+            className="text-primary-red hover:text-white hover:shadow-lg hover:scale-105 active:scale-95 active:shadow-inner font-medium font-secondary border border-primary-red px-4 py-1.5 rounded-md transition-all duration-300 ease-in-out"
           >
             Home
           </a>
 
-          {/* Hamburger Menu Button */}
+          {/* Hamburger Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-600 hover:text-red-700 focus:outline-none"
@@ -44,9 +46,12 @@ function HeaderBar() {
         </div>
       </header>
 
-      {/* Vertical Dropdown Menu */}
+      {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-lg z-40">
+        <div
+          className="absolute top-full left-0 w-full !bg-white border-t border-gray-200 shadow-lg z-40"
+          style={{ backgroundColor: '#FFFFFF' }}
+        >
           <nav className="flex flex-col py-4">
             <a
               href="#"
