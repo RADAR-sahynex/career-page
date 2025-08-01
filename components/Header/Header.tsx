@@ -3,42 +3,37 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 function HeaderBar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
       {/* Gradient header background */}
       <div className="w-full h-2 bg-header-gradient"></div>
-      
-      <header className="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 !bg-white shadow-md" style={{ backgroundColor: '#ffffff' }}>
-        {/* Logo */}
+
+      <header className="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 bg-white shadow-md relative z-50">
+        {/* Left: Logo */}
         <div className="flex items-center space-x-4">
-          <Image src="/sahynex_logo.jpeg" alt="" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
-          <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-primary-red font-primary">CAREERS AT SAHYNEX</h1>
+          <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-primary-red font-primary">CAREERS AT </h1>
+          <Image src="/sahynex_logo.jpeg" alt="Sahynex Logo" width={100} height={33} className="sm:w-[120px] sm:h-[40px]" />
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden sm:flex items-center space-x-8">
-          <nav className="flex space-x-8">
-            <a href="#" className="text-primary-red hover:text-red-700 font-medium font-secondary transition-colors duration-200">Career Home</a>
-            <a href="#" className="text-primary-red hover:text-red-700 font-medium font-secondary transition-colors duration-200">Search Jobs</a>
-          </nav>
-          <button className="bg-primary-red hover:bg-primary-red text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200 font-secondary">
-            Sign In
-          </button>
-        </div>
+        {/* Right: Home Button + Hamburger */}
+        <div className="flex items-center space-x-4">
+          {/* Home Button */}
+          <a
+            href="#"
+            className="text-primary-red hover:text-red-700 font-medium font-secondary border border-primary-red px-4 py-1.5 rounded-md transition duration-200"
+          >
+            Home
+          </a>
 
-        {/* Mobile Menu Button and Sign In */}
-        <div className="sm:hidden flex items-center space-x-4">
-          <button className="bg-primary-red hover:bg-primary-red text-white font-medium px-4 py-2 rounded-lg transition-colors duration-200 text-sm font-secondary">
-            Sign In
-          </button>
+          {/* Hamburger Menu Button */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-600 hover:text-red-700 focus:outline-none"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMobileMenuOpen ? (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -46,21 +41,35 @@ function HeaderBar() {
             </svg>
           </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg sm:hidden z-50">
-            <nav className="flex flex-col py-4">
-              <a href="#" className="px-6 py-3 text-primary-red hover:text-red-700 hover:bg-gray-50 font-medium transition-colors duration-200 font-secondary">
-                Career Home
-              </a>
-              <a href="#" className="px-6 py-3 text-primary-red hover:text-red-700 hover:bg-gray-50 font-medium transition-colors duration-200 font-secondary">
-                Search Jobs
-              </a>
-            </nav>
-          </div>
-        )}
       </header>
+
+      {/* Vertical Dropdown Menu */}
+      {isMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-lg z-40">
+          <nav className="flex flex-col py-4">
+            <a
+              href="#"
+              className="px-6 py-3 text-primary-red hover:text-red-700 hover:bg-gray-50 font-medium transition duration-200 font-secondary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Career Home
+            </a>
+            <a
+              href="#"
+              className="px-6 py-3 text-primary-red hover:text-red-700 hover:bg-gray-50 font-medium transition duration-200 font-secondary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Search Jobs
+            </a>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="mx-6 my-3 bg-primary-red hover:bg-red-700 text-white font-medium px-6 py-2 rounded-lg transition duration-200 font-secondary"
+            >
+              Sign In
+            </button>
+          </nav>
+        </div>
+      )}
     </div>
   );
 }
